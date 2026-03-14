@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoCart by SharedCircle — Shared Shopping, Simplified</title>
+  <meta name="description" content="CoCart by SharedCircle — the smart shared shopping and expense splitting app for groups. Create lists, shop together, split costs — from groceries to household supplies, party planning, and more. Powered by AI.">
+  <meta name="theme-color" content="#050510">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CoCart by SharedCircle — Shared Shopping, Simplified">
+  <meta property="og:description" content="The smart shared shopping and expense splitting app for groups. Create lists, shop together, split costs — from groceries to party planning.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.png">
+
+  <!-- Security meta tags -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+        </div>
+        <span>CoCart</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#use-cases" class="nav-link">Use Cases</a>
+        <a href="#download" class="nav-link">Download</a>
+        <a href="support.html" class="nav-link">Support</a>
+      </div>
+      <a href="#download" class="nav-cta">Coming Soon</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Smart Group Shopping & Splitting
+        </div>
+        <h1 class="hero-title">
+          Shop Together.<br>
+          <span class="gradient-text">Split Smartly.</span>
+        </h1>
+        <p class="hero-subtitle">
+          CoCart is the all-in-one app for shared shopping lists, real-time collaboration,
+          and AI-powered expense splitting. From groceries to household supplies, party planning, and beyond — perfect for roommates, families, and friend groups.
+        </p>
+        <div class="hero-buttons">
+          <span class="btn btn-primary" style="opacity: 0.7; cursor: default;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS — Coming Soon
+          </span>
+          <span class="btn btn-secondary" style="opacity: 0.7; cursor: default;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+            Android — Coming Soon
+          </span>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Free to Use</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">AI</span>
+            <span class="stat-label">Powered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Real-time</span>
+            <span class="stat-label">Sync</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="mock-header">
+              <div class="mock-logo-small">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                </svg>
+              </div>
+              <span class="mock-title">Household Buddies</span>
+            </div>
+            <div class="mock-item">
+              <div class="mock-check checked"></div>
+              <span>Organic Milk</span>
+              <span class="mock-price">$4.99</span>
+            </div>
+            <div class="mock-item">
+              <div class="mock-check checked"></div>
+              <span>Sourdough Bread</span>
+              <span class="mock-price">$5.49</span>
+            </div>
+            <div class="mock-item">
+              <div class="mock-check"></div>
+              <span>Avocados (3)</span>
+              <span class="mock-price">$3.99</span>
+            </div>
+            <div class="mock-item">
+              <div class="mock-check"></div>
+              <span>Chicken Breast</span>
+              <span class="mock-price">$8.99</span>
+            </div>
+            <div class="mock-item">
+              <div class="mock-check"></div>
+              <span>Greek Yogurt</span>
+              <span class="mock-price">$6.49</span>
+            </div>
+            <div class="mock-bottom">
+              <div class="mock-total">
+                <span>Total</span>
+                <span class="mock-total-price">$29.95</span>
+              </div>
+              <div class="mock-split-badge">Split 3 ways: $9.98 each</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Features</span>
+        <h2 class="section-title">Everything you need for shared shopping</h2>
+        <p class="section-subtitle">From collaborative lists to smart expense splitting, CoCart handles the entire shared shopping experience — groceries, household supplies, party planning, and more.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(99, 102, 241, 0.12);">
+            <span>📝</span>
+          </div>
+          <h3 class="feature-title">Shared Shopping Lists</h3>
+          <p class="feature-desc">Create a shared list that everyone in the group can see and edit in real time. Add items, check them off, and stay in sync — whether it's groceries, household essentials, or party supplies.</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+            <span>💵</span>
+          </div>
+          <h3 class="feature-title">Smart Expense Splitting</h3>
+          <p class="feature-desc">Snap a photo of any receipt and CoCart reads it automatically. It figures out who owes what based on actual items — no more calculator apps or awkward money conversations.</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(249, 115, 22, 0.12);">
+            <span>🚗</span>
+          </div>
+          <h3 class="feature-title">Live Trip Tracking</h3>
+          <p class="feature-desc">See when the shopper leaves, arrives at the store, and how many items they've grabbed. Send last-minute "can you also get..." requests while they shop.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(236, 72, 153, 0.12);">
+            <span>💬</span>
+          </div>
+          <h3 class="feature-title">Group Chat</h3>
+          <p class="feature-desc">Chat right inside the app with replies, pinned messages, and read receipts. Ask "should I get the blue ones?" without switching to another messaging app.</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(124, 58, 237, 0.12);">
+            <span>🪄</span>
+          </div>
+          <h3 class="feature-title">Magic Import</h3>
+          <p class="feature-desc">Paste a YouTube video, Instagram post, or any recipe URL — CoCart's AI extracts all ingredients and adds them to your list. Or just describe what you need for any occasion.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(59, 130, 246, 0.12);">
+            <span>💰</span>
+          </div>
+          <h3 class="feature-title">Smart Settlement</h3>
+          <p class="feature-desc">CoCart finds the optimal way to settle all debts with the fewest payments. Instead of everyone sending money back and forth, it simplifies to just a few transactions.</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(217, 119, 6, 0.12);">
+            <span>📊</span>
+          </div>
+          <h3 class="feature-title">Price Tracking & History</h3>
+          <p class="feature-desc">See how prices change over time and across stores. CoCart remembers what things cost and lets you know when there's a better deal.</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+            <span>📈</span>
+          </div>
+          <h3 class="feature-title">Spending Insights</h3>
+          <p class="feature-desc">Category breakdowns, trend analysis, and a monthly "Spending Wrapped" summary — Instagram Stories-style. See who spent what and where your money goes.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(99, 102, 241, 0.12);">
+            <span>🎙️</span>
+          </div>
+          <h3 class="feature-title">Voice Input</h3>
+          <p class="feature-desc">Hands full? Just say what you need — "paper towels, batteries, and snacks" — and CoCart adds them all. Works anywhere in the app.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(249, 115, 22, 0.12);">
+            <span>🔥</span>
+          </div>
+          <h3 class="feature-title">AI Roast My Cart</h3>
+          <p class="feature-desc">Let AI roast your shopping habits for fun. "3 types of cheese but no vegetables? Your nutritionist is crying." Share the laughs with your group.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(52, 211, 153, 0.12);">
+            <span>👥</span>
+          </div>
+          <h3 class="feature-title">Group Management</h3>
+          <p class="feature-desc">Admin controls, invite codes, approval-based joining, and member management. Run your household or friend group exactly how you want.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+            <span>🧾</span>
+          </div>
+          <h3 class="feature-title">Receipt Import</h3>
+          <p class="feature-desc">Going paperless? Share a digital receipt from any store directly to CoCart using your phone's share button. Or paste a screenshot from your clipboard — it reads the receipt and logs the expense.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(249, 115, 22, 0.12);">
+            <span>🍽️</span>
+          </div>
+          <h3 class="feature-title">Meal Planning</h3>
+          <p class="feature-desc">AI generates a full 7-day meal plan based on your dietary preferences and cuisine favorites. Swap dishes, mark meals as cooked, and add all ingredients to your shopping list with one tap.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(239, 68, 68, 0.12);">
+            <span>🛡️</span>
+          </div>
+          <h3 class="feature-title">Recall Alerts</h3>
+          <p class="feature-desc">CoCart checks your receipt items against live FDA and USDA recall databases. If something you bought has been recalled, you'll see a warning right on the receipt review screen.</p>
+          <span class="feature-new">New</span>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon" style="background: rgba(59, 130, 246, 0.12);">
+            <span>🔔</span>
+          </div>
+          <h3 class="feature-title">Push Notifications</h3>
+          <p class="feature-desc">Get notified when someone starts a trip, checks off items, sends a chat message, or adds an expense. Stay in the loop without having to open the app.</p>
+        </div>
+
+        <div class="feature-card feature-card-highlight" data-animate>
+          <div class="feature-icon" style="background: rgba(59, 130, 246, 0.12);">
+            <span>🗣️</span>
+          </div>
+          <h3 class="feature-title">Alexa Integration</h3>
+          <p class="feature-desc">Cooking and realize you're out of something? Just say "Alexa, add paper towels to my shopping list" and it shows up on everyone's CoCart list instantly.</p>
+          <span class="feature-coming-soon">Coming Soon</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">How It Works</span>
+        <h2 class="section-title">Get started in minutes</h2>
+        <p class="section-subtitle">Three simple steps to transform your group shopping and spending experience.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" data-animate>
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Create Your Group</h3>
+            <p class="step-desc">Sign up, create a group, and invite your roommates, family, or friends with a simple invite code. Admin approval keeps it secure.</p>
+          </div>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Build Your List</h3>
+            <p class="step-desc">Add items manually, use voice commands, paste a recipe URL, import from a shared receipt, or let AI build your list. Everyone can contribute in real-time.</p>
+          </div>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Shop & Split</h3>
+            <p class="step-desc">Start a trip, check off items live, scan your receipt, and let CoCart calculate everyone's share. Settle up with the fewest payments possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A Real Scenario -->
+  <section class="scenario-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.2);">See It In Action</span>
+        <h2 class="section-title">A Saturday with CoCart</h2>
+        <p class="section-subtitle">Here's how a typical shopping run works — from list to settlement — all inside one app.</p>
+      </div>
+      <div class="scenario-timeline" data-animate>
+        <div class="scenario-step">
+          <div class="scenario-time">9:00 AM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">Sarah</div>
+            <div class="scenario-what">Adds "Dish soap, Chicken, Rice, Avocados" to the shared list. Pastes a YouTube recipe link — AI extracts 6 more ingredients automatically.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">9:15 AM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">Mike</div>
+            <div class="scenario-what">Opens the app and sees the updated list. Adds "Paper towels" and "Batteries" using voice input while getting ready.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">11:00 AM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">Sarah</div>
+            <div class="scenario-what">Starts a shopping trip to Costco. Mike and the group get a notification and can see she's en route.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">11:20 AM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">Mike</div>
+            <div class="scenario-what">Sees Sarah arrived at the store (8 of 14 items done). Sends a last-minute request: "Can you grab Yogurt?"</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">12:00 PM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">Sarah</div>
+            <div class="scenario-what">Done shopping. Scans the receipt — CoCart reads every item and price automatically. Assigns items to the right people.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">12:01 PM</div>
+          <div class="scenario-dot" style="background: #ef4444; box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);"></div>
+          <div class="scenario-card" style="border-color: rgba(239, 68, 68, 0.3);">
+            <div class="scenario-who" style="color: #ef4444;">CoCart Safety Alert</div>
+            <div class="scenario-what">Flags that the Spinach on the receipt is subject to an active FDA recall for potential contamination. Sarah sees a red warning badge on the item.</div>
+          </div>
+        </div>
+        <div class="scenario-step">
+          <div class="scenario-time">12:02 PM</div>
+          <div class="scenario-dot"></div>
+          <div class="scenario-card">
+            <div class="scenario-who">CoCart</div>
+            <div class="scenario-what">Calculates the optimal split: "Mike owes Sarah $34.20." One payment, everyone's square. Done.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">App Preview</span>
+        <h2 class="section-title">See CoCart in action</h2>
+        <p class="section-subtitle">A beautifully designed experience for every step of your shopping journey.</p>
+      </div>
+      <div class="screenshot-grid">
+
+        <!-- Home Screen Preview -->
+        <div class="screenshot-card" data-animate>
+          <div class="screenshot-label">Home</div>
+          <div class="preview-phone">
+            <div class="preview-phone-header" style="background: linear-gradient(180deg, #111827, #0f172a);">
+              <div class="preview-phone-group">
+                <div class="preview-phone-avatar" style="background: rgba(99, 102, 241, 0.25);">👥</div>
+                <span class="preview-phone-name">Household</span>
+                <span class="preview-phone-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8;">HOME</span>
+              </div>
+              <span style="font-size: 14px; opacity: 0.3;">🔔</span>
+            </div>
+            <div style="padding: 2px 18px 16px; background: linear-gradient(180deg, #0f172a, #0f172a);">
+              <div class="preview-hero-sub">Good afternoon 👋</div>
+              <div class="preview-hero-main">What's cooking?</div>
+            </div>
+            <div class="preview-body">
+              <div class="preview-card" style="background: linear-gradient(135deg, #10b981, #059669); margin-top: -8px;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                  <div style="width: 8px; height: 8px; border-radius: 4px; background: #fff;"></div>
+                  <span style="font-size: 11px; font-weight: 700; color: rgba(255,255,255,.8);">LIVE</span>
+                </div>
+                <div style="font-size: 15px; font-weight: 800; color: #fff;">Priya is shopping</div>
+                <div style="font-size: 11px; color: rgba(255,255,255,.7); margin-top: 2px;">at Costco · 8 of 15 items</div>
+                <div style="height: 4px; background: rgba(255,255,255,.2); border-radius: 2px; margin-top: 10px; overflow: hidden;"><div style="height: 4px; width: 53%; background: #fff; border-radius: 2px;"></div></div>
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 12px;">
+                <div class="preview-card" style="flex: 1; text-align: center; padding: 10px;">
+                  <div style="font-size: 18px;">💵</div>
+                  <div style="font-size: 9px; font-weight: 700; color: #374151; margin-top: 4px;">Split Bill</div>
+                </div>
+                <div class="preview-card" style="flex: 1; text-align: center; padding: 10px;">
+                  <div style="font-size: 18px;">🧾</div>
+                  <div style="font-size: 9px; font-weight: 700; color: #374151; margin-top: 4px;">Scan</div>
+                </div>
+                <div class="preview-card" style="flex: 1; text-align: center; padding: 10px;">
+                  <div style="font-size: 18px;">🪄</div>
+                  <div style="font-size: 9px; font-weight: 700; color: #374151; margin-top: 4px;">Import</div>
+                </div>
+              </div>
+              <div style="margin-top: 12px; font-size: 12px; font-weight: 800; color: #0f172a;">Activity</div>
+              <div style="margin-top: 6px; font-size: 11px; color: #475569;"><b style="color: #0f172a;">Priya</b> checked off Eggs · 2m</div>
+              <div style="margin-top: 4px; font-size: 11px; color: #475569;"><b style="color: #0f172a;">Wrishika</b> scheduled trip · 30m</div>
+            </div>
+            <div class="preview-tabs">
+              <div class="preview-tab active"><div>🏠</div><div class="preview-tab-label">Home</div></div>
+              <div class="preview-tab"><div>🛒</div><div class="preview-tab-label">Shop</div></div>
+              <div><div class="preview-tab-center" style="background: linear-gradient(135deg, #10b981, #059669); color: #fff;">🚗</div></div>
+              <div class="preview-tab"><div>💰</div><div class="preview-tab-label">Split</div></div>
+              <div class="preview-tab"><div>⚙️</div><div class="preview-tab-label">Config</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shopping List Preview -->
+        <div class="screenshot-card" data-animate>
+          <div class="screenshot-label">Shopping List</div>
+          <div class="preview-phone">
+            <div class="preview-phone-header" style="background: linear-gradient(180deg, #0c1220, #0f172a);">
+              <div class="preview-phone-group">
+                <div class="preview-phone-avatar" style="background: rgba(99, 102, 241, 0.25);">👥</div>
+                <span class="preview-phone-name">Household</span>
+              </div>
+              <span style="font-size: 14px; opacity: 0.3;">🔔</span>
+            </div>
+            <div style="padding: 2px 18px 16px; background: #0f172a;">
+              <div class="preview-hero-sub">28 items · ~$126</div>
+              <div class="preview-hero-main">Shopping List</div>
+            </div>
+            <div class="preview-body">
+              <div style="display: inline-block; padding: 4px 10px; border-radius: 6px; background: #e0e7ff; color: #4338ca; font-size: 10px; font-weight: 700; margin-bottom: 8px;">🚗 Going Soon</div>
+              <div class="preview-card" style="padding: 0; overflow: hidden;">
+                <div style="padding: 8px 12px; background: #ede9fe; font-size: 11px; font-weight: 700; color: #4338ca;">🏪 Patel Brothers · Today 5 PM</div>
+                <div class="preview-item" style="padding: 8px 12px;"><div class="preview-check"></div><span>🌿 Cilantro</span><span class="preview-item-price">$0.20</span></div>
+                <div class="preview-item" style="padding: 8px 12px;"><div class="preview-check"></div><span>🧅 Onions (3)</span><span class="preview-item-price">$1.99</span></div>
+              </div>
+              <div style="display: inline-block; padding: 4px 10px; border-radius: 6px; background: #f1f5f9; color: #64748b; font-size: 10px; font-weight: 700; margin: 10px 0 8px;">🧺 Buy Anytime · 15 items</div>
+              <div class="preview-card" style="padding: 0; overflow: hidden;">
+                <div class="preview-item" style="padding: 8px 12px;"><div class="preview-check"></div><span>🧈 Butter</span><span class="preview-item-price">$4.99</span></div>
+                <div class="preview-item" style="padding: 8px 12px;"><div class="preview-check"></div><span>🥚 Eggs (12)</span><span class="preview-item-price" style="color: #16a34a;">$2.99 <span style="text-decoration: line-through; color: #94a3b8; font-size: 9px;">$3.49</span></span></div>
+              </div>
+            </div>
+            <div class="preview-tabs">
+              <div class="preview-tab"><div>🏠</div><div class="preview-tab-label">Home</div></div>
+              <div class="preview-tab active"><div>🛒</div><div class="preview-tab-label">Shop</div></div>
+              <div><div class="preview-tab-center" style="background: linear-gradient(135deg, #7c3aed, #6366f1); color: #fff;">🚗</div></div>
+              <div class="preview-tab"><div>💰</div><div class="preview-tab-label">Split</div></div>
+              <div class="preview-tab"><div>⚙️</div><div class="preview-tab-label">Config</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settlement Preview -->
+        <div class="screenshot-card" data-animate>
+          <div class="screenshot-label">Settlement Plan</div>
+          <div class="preview-phone">
+            <div class="preview-phone-header" style="background: linear-gradient(180deg, #14210a, #0f172a);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 13px; color: rgba(255,255,255,.5);">←</span>
+                <span class="preview-phone-name" style="font-size: 14px;">Settlement Plan</span>
+              </div>
+            </div>
+            <div style="padding: 6px 18px 16px; background: #0f172a;">
+              <div class="preview-hero-sub">Minimum transactions</div>
+              <div class="preview-hero-main" style="font-size: 18px;">3 payments needed</div>
+            </div>
+            <div class="preview-body">
+              <div class="preview-card">
+                <div style="font-size: 10px; font-weight: 700; color: #94a3b8; margin-bottom: 10px;">OPTIMAL PLAN</div>
+                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                  <div style="width: 26px; height: 26px; border-radius: 8px; background: #dcfce7; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">K</div>
+                  <div style="flex: 1; font-size: 12px; font-weight: 700; color: #0f172a;">Kartik → Priya</div>
+                  <div style="font-size: 13px; font-weight: 800; color: #dc2626;">$32.40</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                  <div style="width: 26px; height: 26px; border-radius: 8px; background: #e0e7ff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">K</div>
+                  <div style="flex: 1; font-size: 12px; font-weight: 700; color: #0f172a;">Kartik → Wrishika</div>
+                  <div style="font-size: 13px; font-weight: 800; color: #dc2626;">$13.40</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0;">
+                  <div style="width: 26px; height: 26px; border-radius: 8px; background: #fce7f3; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">W</div>
+                  <div style="flex: 1; font-size: 12px; font-weight: 700; color: #0f172a;">Wrishika → Priya</div>
+                  <div style="font-size: 13px; font-weight: 800; color: #dc2626;">$8.00</div>
+                </div>
+              </div>
+              <div class="preview-card" style="margin-top: 10px;">
+                <div style="font-size: 10px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Who Spent What</div>
+                <div style="margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 10px; color: #64748b; width: 50px;">Priya</span>
+                  <div style="flex: 1; height: 16px; background: #f1f5f9; border-radius: 4px; overflow: hidden;"><div style="height: 16px; width: 65%; background: #6366f1; border-radius: 4px; padding-left: 6px; font-size: 9px; color: #fff; display: flex; align-items: center;">$145</div></div>
+                </div>
+                <div style="margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 10px; color: #64748b; width: 50px;">Wrishika</span>
+                  <div style="flex: 1; height: 16px; background: #f1f5f9; border-radius: 4px; overflow: hidden;"><div style="height: 16px; width: 40%; background: #10b981; border-radius: 4px; padding-left: 6px; font-size: 9px; color: #fff; display: flex; align-items: center;">$89</div></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 10px; color: #64748b; width: 50px;">Kartik</span>
+                  <div style="flex: 1; height: 16px; background: #f1f5f9; border-radius: 4px; overflow: hidden;"><div style="height: 16px; width: 20%; background: #f59e0b; border-radius: 4px; padding-left: 6px; font-size: 9px; color: #fff; display: flex; align-items: center;">$44</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-tabs">
+              <div class="preview-tab"><div>🏠</div><div class="preview-tab-label">Home</div></div>
+              <div class="preview-tab"><div>🛒</div><div class="preview-tab-label">Shop</div></div>
+              <div><div class="preview-tab-center" style="background: linear-gradient(135deg, #7c3aed, #6366f1); color: #fff;">🚗</div></div>
+              <div class="preview-tab active"><div>💰</div><div class="preview-tab-label">Split</div></div>
+              <div class="preview-tab"><div>⚙️</div><div class="preview-tab-label">Config</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Deep Dive -->
+  <section class="deep-dive" id="deep-dive">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Deep Dive</span>
+        <h2 class="section-title">How each feature works</h2>
+        <p class="section-subtitle">A closer look at the workflows that make CoCart the smartest way to shop together.</p>
+      </div>
+
+      <div class="dive-row" data-animate>
+        <div class="dive-text">
+          <div class="dive-label" style="color: #818cf8; background: rgba(99, 102, 241, 0.12);">Lists</div>
+          <h3>Magic Import & Smart Lists</h3>
+          <p>Paste a YouTube video, Instagram reel, or any recipe URL — CoCart's AI watches, reads, or scrapes the content and extracts every ingredient automatically. You can also describe a meal in plain text and it builds your grocery list in seconds.</p>
+          <ul class="dive-features">
+            <li>Import from YouTube, Instagram, any website, or plain text</li>
+            <li>AI extracts ingredients with quantities and adds to your list</li>
+            <li>Defer items that are too expensive or out of season</li>
+            <li>See who added each item and when</li>
+          </ul>
+        </div>
+        <div class="dive-visual">
+          <div class="dive-card">
+            <div class="dive-card-header" style="background: linear-gradient(135deg, #7c3aed, #6366f1);">
+              <span>🪄 Magic Import</span>
+            </div>
+            <div class="dive-card-body">
+              <div class="dive-card-quote">https://www.youtube.com/watch?v=...</div>
+              <div class="dive-card-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </div>
+              <div class="dive-card-items">
+                <span>Black Lentils (1 cup)</span>
+                <span>Tomato Puree (1 cup)</span>
+                <span>Heavy Cream (1/2 cup)</span>
+                <span>+ 5 more items</span>
+              </div>
+              <div class="dive-sources">
+                <div class="dive-source-row"><span>📺</span><span class="dive-source-name">YouTube</span><span class="dive-source-desc">Auto-transcribe</span></div>
+                <div class="dive-source-row"><span>📱</span><span class="dive-source-name">Instagram</span><span class="dive-source-desc">Post/Reel</span></div>
+                <div class="dive-source-row"><span>🌐</span><span class="dive-source-name">Any Website</span><span class="dive-source-desc">Auto-detect</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dive-row dive-row-reverse" data-animate>
+        <div class="dive-text">
+          <div class="dive-label" style="color: #34d399; background: rgba(16, 185, 129, 0.12);">Trips</div>
+          <h3>Live Shopping Experience</h3>
+          <p>Start a trip, and your group gets real-time updates. They can see your progress, send last-minute requests, and watch items get checked off live. When you arrive at the store, the app switches to live shopping mode with an optimized checklist.</p>
+          <ul class="dive-features">
+            <li>En-route tracking with distance and ETA</li>
+            <li>Live progress bar as items get checked off</li>
+            <li>Real-time item requests from group members</li>
+            <li>Trip complete flow with receipt scanning</li>
+          </ul>
+        </div>
+        <div class="dive-visual">
+          <div class="dive-card">
+            <div class="dive-card-header" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <span>🚗 Live Trip</span>
+            </div>
+            <div class="dive-card-body">
+              <div class="dive-timeline">
+                <div class="dive-timeline-item done">
+                  <div class="dive-timeline-dot"></div>
+                  <span>Trip scheduled for 5:00 PM</span>
+                </div>
+                <div class="dive-timeline-item done">
+                  <div class="dive-timeline-dot"></div>
+                  <span>En route — 3 min away</span>
+                </div>
+                <div class="dive-timeline-item active">
+                  <div class="dive-timeline-dot"></div>
+                  <span>Shopping at Patel Brothers (8/15)</span>
+                </div>
+                <div class="dive-timeline-item">
+                  <div class="dive-timeline-dot"></div>
+                  <span>Scan receipt &amp; split</span>
+                </div>
+              </div>
+              <div style="margin-top: 12px; padding: 10px 12px; background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 14px;">📩</span>
+                <span style="font-size: 12px; color: rgba(255,255,255,.7);">Wrishika requests Yogurt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dive-row" data-animate>
+        <div class="dive-text">
+          <div class="dive-label" style="color: #fb923c; background: rgba(249, 115, 22, 0.12);">Expenses</div>
+          <h3>Smart Splitting &amp; Settlement</h3>
+          <p>After shopping, scan the receipt, share a digital one from your email, or paste a screenshot. CoCart reads every line item, lets you assign items to specific people, and calculates the optimal settlement plan — minimizing the number of payments needed for everyone to be square.</p>
+          <ul class="dive-features">
+            <li>Camera-based receipt scanning with on-device OCR</li>
+            <li>Import digital receipts via share or clipboard paste</li>
+            <li>Tap to assign items to specific group members</li>
+            <li>Optimal settlement plan with fewest transactions</li>
+            <li>Store-to-group memory for automatic routing</li>
+          </ul>
+        </div>
+        <div class="dive-visual">
+          <div class="dive-card">
+            <div class="dive-card-header" style="background: linear-gradient(135deg, #f59e0b, #ea580c);">
+              <span>💰 Settlement Plan</span>
+            </div>
+            <div class="dive-card-body">
+              <div class="dive-settle-row">
+                <div class="dive-avatar" style="background: #dcfce7; color: #0f172a;">K</div>
+                <span class="dive-arrow">pays</span>
+                <div class="dive-avatar" style="background: #fce7f3; color: #0f172a;">P</div>
+                <span class="dive-amount">$32.40</span>
+              </div>
+              <div class="dive-settle-row">
+                <div class="dive-avatar" style="background: #e0e7ff; color: #0f172a;">W</div>
+                <span class="dive-arrow">pays</span>
+                <div class="dive-avatar" style="background: #fce7f3; color: #0f172a;">P</div>
+                <span class="dive-amount">$8.00</span>
+              </div>
+              <div class="dive-settle-total">
+                <span>2 transactions to settle up</span>
+              </div>
+              <div style="margin-top: 14px; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 8px;">Who Spent What</div>
+              <div class="dive-bar-row"><span class="dive-bar-label">Priya</span><div class="dive-bar-track"><div class="dive-bar-fill" style="width: 65%; background: #6366f1;">$145</div></div></div>
+              <div class="dive-bar-row"><span class="dive-bar-label">Wrishika</span><div class="dive-bar-track"><div class="dive-bar-fill" style="width: 40%; background: #10b981;">$89</div></div></div>
+              <div class="dive-bar-row"><span class="dive-bar-label">Kartik</span><div class="dive-bar-track"><div class="dive-bar-fill" style="width: 20%; background: #f59e0b;">$44</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dive-row dive-row-reverse" data-animate>
+        <div class="dive-text">
+          <div class="dive-label" style="color: #f472b6; background: rgba(236, 72, 153, 0.12);">Chat</div>
+          <h3>Built-In Group Chat</h3>
+          <p>No more switching between a shopping app and a messaging app. CoCart has a full-featured group chat built right in — so all your shopping conversations, decisions, and requests happen in one place.</p>
+          <ul class="dive-features">
+            <li>Threaded replies to keep conversations organized</li>
+            <li>Pin important messages for easy reference</li>
+            <li>Read receipts so you know who's seen what</li>
+            <li>Push notifications for new messages</li>
+            <li>Share lists, trips, and receipts directly in chat</li>
+          </ul>
+        </div>
+        <div class="dive-visual">
+          <div class="dive-card">
+            <div class="dive-card-header" style="background: linear-gradient(135deg, #ec4899, #a855f7);">
+              <span>💬 Group Chat</span>
+            </div>
+            <div class="dive-card-body">
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="display: flex; gap: 8px; align-items: flex-start;">
+                  <div class="dive-avatar" style="background: #fce7f3; color: #0f172a; min-width: 26px;">P</div>
+                  <div style="background: rgba(236, 72, 153, 0.1); border-radius: 12px 12px 12px 4px; padding: 8px 12px;">
+                    <span style="font-size: 11px; font-weight: 700; color: #ec4899; display: block; margin-bottom: 2px;">Priya</span>
+                    <span style="font-size: 12px; color: var(--dark-text-secondary);">Should I get organic or regular eggs?</span>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: flex-start; flex-direction: row-reverse;">
+                  <div class="dive-avatar" style="background: #dcfce7; color: #0f172a; min-width: 26px;">K</div>
+                  <div style="background: rgba(99, 102, 241, 0.15); border-radius: 12px 12px 4px 12px; padding: 8px 12px;">
+                    <span style="font-size: 12px; color: var(--dark-text-secondary);">Organic! They're only $1 more</span>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: flex-start;">
+                  <div class="dive-avatar" style="background: #e0e7ff; color: #0f172a; min-width: 26px;">W</div>
+                  <div style="background: rgba(236, 72, 153, 0.1); border-radius: 12px 12px 12px 4px; padding: 8px 12px;">
+                    <span style="font-size: 11px; font-weight: 700; color: #a855f7; display: block; margin-bottom: 2px;">Wrishika</span>
+                    <span style="font-size: 12px; color: var(--dark-text-secondary);">Can you also grab almond milk?</span>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 12px; padding: 8px 12px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 12px;">📌</span>
+                <span style="font-size: 11px; color: var(--dark-text-muted);">Pinned: Shopping at 5 PM today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Features -->
+  <section class="ai-features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(124, 58, 237, 0.12); color: #c084fc; border-color: rgba(124, 58, 237, 0.2);">Powered by AI</span>
+        <h2 class="section-title">AI that makes shopping fun</h2>
+        <p class="section-subtitle">From smart recipe imports to hilarious cart roasts, AI is woven into every part of CoCart.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🪄</div>
+          <h3 class="ai-card-title">Magic Import</h3>
+          <p class="ai-card-desc">Paste a YouTube cooking video or Instagram recipe reel — AI extracts every ingredient and adds them to your list automatically.</p>
+          <span class="ai-card-tag">CoCart AI</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🍽️</div>
+          <h3 class="ai-card-title">Meal Planner</h3>
+          <p class="ai-card-desc">AI generates a full 7-day meal plan based on your dietary preferences and cuisine favorites. Swap dishes, add ingredients to your list with one tap.</p>
+          <span class="ai-card-tag">CoCart AI</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🎙️</div>
+          <h3 class="ai-card-title">Voice Input</h3>
+          <p class="ai-card-desc">"Eggs, milk, and bread" — just say what you need and watch items appear on your list instantly. Perfect when your hands are busy.</p>
+          <span class="ai-card-tag">Speech Recognition</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🧾</div>
+          <h3 class="ai-card-title">Smart Receipt Scan</h3>
+          <p class="ai-card-desc">Scan a receipt, share a digital one, or paste a screenshot — AI reads every line item to split expenses. Remembers which store goes with which group.</p>
+          <span class="ai-card-tag">ML Kit + AI</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🔥</div>
+          <h3 class="ai-card-title">Roast My Cart</h3>
+          <p class="ai-card-desc">"3 types of cheese but no vegetables?" Let AI hilariously roast your shopping habits and share the laughs with your group.</p>
+          <span class="ai-card-tag">CoCart AI</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">📊</div>
+          <h3 class="ai-card-title">Spending Wrapped</h3>
+          <p class="ai-card-desc">Instagram Stories-style monthly spending recap. See your top categories, trip count, total items, and savings — all in a beautiful card.</p>
+          <span class="ai-card-tag">Smart Analytics</span>
+        </div>
+        <div class="ai-card" data-animate>
+          <div class="ai-card-icon">🛡️</div>
+          <h3 class="ai-card-title">Recall Safety Check</h3>
+          <p class="ai-card-desc">After scanning a receipt, CoCart cross-references your items against live FDA and USDA recall databases. Flagged items get a warning badge instantly.</p>
+          <span class="ai-card-tag">FDA + USDA Data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Compare</span>
+        <h2 class="section-title">CoCart vs. the old way</h2>
+        <p class="section-subtitle">See how CoCart replaces the mess of texts, spreadsheets, and mental math.</p>
+      </div>
+      <div class="comparison-table" data-animate>
+        <div class="comparison-header">
+          <div class="comparison-feature-col">Task</div>
+          <div class="comparison-old-col">Without CoCart</div>
+          <div class="comparison-new-col">With CoCart</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Building a shared list</div>
+          <div class="comparison-old-col">Scattered texts, notes apps, forgotten items</div>
+          <div class="comparison-new-col">Shared real-time list everyone can add to</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Adding from a recipe</div>
+          <div class="comparison-old-col">Manually reading and typing each ingredient</div>
+          <div class="comparison-new-col">Paste a URL or describe the meal — AI does the rest</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Knowing who's shopping</div>
+          <div class="comparison-old-col">"Are you at the store yet?" texts</div>
+          <div class="comparison-new-col">Live trip tracking with progress bar and ETA</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Last-minute requests</div>
+          <div class="comparison-old-col">Text while hoping they see it in time</div>
+          <div class="comparison-new-col">In-app request that pops up on their screen</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Splitting the bill</div>
+          <div class="comparison-old-col">Calculator app, spreadsheets, arguments</div>
+          <div class="comparison-new-col">Scan receipt, assign items, auto-split</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Settling up</div>
+          <div class="comparison-old-col">"You owe me... wait, let me check"</div>
+          <div class="comparison-new-col">Optimal settlement plan with fewest transfers</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Finding best prices</div>
+          <div class="comparison-old-col">Checking multiple store apps or flyers</div>
+          <div class="comparison-new-col">Price history and deal alerts built in</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Tracking spending</div>
+          <div class="comparison-old-col">No idea where money goes each month</div>
+          <div class="comparison-new-col">Monthly Wrapped with category breakdowns</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Planning meals</div>
+          <div class="comparison-old-col">"What should we eat?" every night</div>
+          <div class="comparison-new-col">AI generates a 7-day meal plan with one tap</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Digital receipts</div>
+          <div class="comparison-old-col">Screenshots forgotten in camera roll</div>
+          <div class="comparison-new-col">Share or paste receipts directly into CoCart</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Product recalls</div>
+          <div class="comparison-old-col">Hope you saw the news before eating it</div>
+          <div class="comparison-new-col">Auto-checked against FDA &amp; USDA databases on every receipt</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-feature-col">Staying in the loop</div>
+          <div class="comparison-old-col">"Did anyone go shopping?" — check the group chat</div>
+          <div class="comparison-new-col">Push notifications for trips, messages, and expenses</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="use-cases" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Who It's For</span>
+        <h2 class="section-title">Built for every kind of group</h2>
+        <p class="section-subtitle">Whether you're splitting groceries with roommates, planning a party, or managing household supplies — CoCart fits right in.</p>
+      </div>
+      <div class="use-cases-grid">
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#127968;</div>
+          <h3 class="use-case-title">Roommates</h3>
+          <p class="use-case-desc">Share household groceries and supplies fairly. Track who bought what, split costs evenly, and settle up at the end of the month with one tap.</p>
+        </div>
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#128106;</div>
+          <h3 class="use-case-title">Families</h3>
+          <p class="use-case-desc">Coordinate shopping runs for groceries, school supplies, or anything the household needs. Let each family member add what they need, and the shopper handles the rest.</p>
+        </div>
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#127881;</div>
+          <h3 class="use-case-title">Events & Potlucks</h3>
+          <p class="use-case-desc">Planning a party, BBQ, or group dinner? Build a shared list, assign who's bringing what, and split the bill fairly when one person picks everything up.</p>
+        </div>
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#127891;</div>
+          <h3 class="use-case-title">College Students</h3>
+          <p class="use-case-desc">Budget-friendly sharing with dorm mates — groceries, cleaning supplies, snacks. Price tracking finds the best deals and settlement plans keep things fair.</p>
+        </div>
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#128149;</div>
+          <h3 class="use-case-title">Couples</h3>
+          <p class="use-case-desc">Manage your shared household budget together. Both partners add what's needed, track spending by category, and stay on top of who paid for what.</p>
+        </div>
+        <div class="use-case-card" data-animate>
+          <div class="use-case-emoji">&#9992;&#65039;</div>
+          <h3 class="use-case-title">Trips & Vacations</h3>
+          <p class="use-case-desc">On a group trip? Build a shared list for Airbnb groceries, beach supplies, or road trip snacks. Split everything fairly so nobody has to track IOUs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights / Why CoCart -->
+  <section class="highlights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why CoCart</span>
+        <h2 class="section-title">More than just a shopping list</h2>
+        <p class="section-subtitle">CoCart combines shared lists, trip coordination, financial tracking, and AI into one app — for groceries, household supplies, and any group purchase.</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Real-Time Collaboration</h4>
+            <p>When someone adds or checks off an item, everyone sees it instantly. Your whole group stays on the same page.</p>
+          </div>
+        </div>
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Receipt Scanning & Import</h4>
+            <p>Point your camera at any receipt, share a digital receipt from another app, or paste a screenshot — CoCart reads every item and price automatically.</p>
+          </div>
+        </div>
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Live Trip Tracking</h4>
+            <p>See when the shopper is en route, arrives, and how far along they are. Send real-time item requests while they shop.</p>
+          </div>
+        </div>
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Deal Alerts & Price History</h4>
+            <p>CoCart tells you when items drop in price or are cheaper at another store. Track prices across stores over time.</p>
+          </div>
+        </div>
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Voice, AI & Meal Planning</h4>
+            <p>Say what you need, paste a recipe URL, generate a 7-day meal plan, or let AI import ingredients. Multiple ways to build your list without typing.</p>
+          </div>
+        </div>
+        <div class="highlight-item" data-animate>
+          <div class="highlight-number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="highlight-text">
+            <h4>Multiple Groups</h4>
+            <p>Be part of several groups at once — one for roommates, one for family, one for your friend circle. Each group has its own lists, trips, expenses, and chat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">What People Say</span>
+        <h2 class="section-title">Loved by groups everywhere</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We used to split groceries with a spreadsheet. CoCart replaced the spreadsheet, the group chat, and the calculator app all at once."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(99, 102, 241, 0.2); color: #818cf8;">A</div>
+            <div>
+              <div class="testimonial-name">Arjun</div>
+              <div class="testimonial-role">Roommate group of 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The live trip tracking is a game changer. I can see when my husband is at the store and send him last-minute requests before he checks out."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">M</div>
+            <div>
+              <div class="testimonial-name">Maya</div>
+              <div class="testimonial-role">Family of 3</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I pasted a YouTube recipe and all the ingredients showed up on our list. Then my roommate scanned the receipt and we settled up in seconds. This app is magic."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: rgba(249, 115, 22, 0.2); color: #fb923c;">J</div>
+            <div>
+              <div class="testimonial-name">Jake</div>
+              <div class="testimonial-role">College dorm group</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section-home" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Is CoCart really free?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes, CoCart is completely free to download and use. All core features — shared lists, group chat, expense splitting, trip tracking, receipt scanning, settlement plans, AI features, and voice input — are included at no cost.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use CoCart for more than just groceries?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">CoCart works for any kind of shared shopping and expenses. Groceries are the most common use case, but groups use it for household supplies, party planning, office supply runs, dorm essentials, potluck coordination, and any situation where a group needs to shop together and split costs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How many people can be in a group?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">There's no hard limit. CoCart works great for 2-person households all the way up to larger groups. You can be part of multiple groups — one for roommates, one for family, one for friends. Each group has its own lists, trips, and expenses.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What is Magic Import?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Magic Import lets you paste a YouTube cooking video, Instagram recipe reel, or any website URL — CoCart's AI watches or reads the content and extracts all ingredients into your shopping list. You can also just describe a meal like "pasta primavera for 4 people" and it figures out everything you need.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How does live trip tracking work?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">When someone starts a shopping trip, the app tracks their journey — en route with distance/ETA, arrival at the store, and live progress as they check items off. Group members can see all this in real time and even send last-minute item requests that pop up on the shopper's screen.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How does the settlement plan work?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">CoCart tracks every expense and who paid. When it's time to settle up, it calculates the optimal payment plan with the minimum number of transactions. Instead of everyone sending money back and forth, it might simplify to just 2-3 payments that settle everything.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What is Spending Wrapped?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">At the end of each month, CoCart creates an Instagram Stories-style recap of your group's spending. It shows total spending, number of trips, items bought, money saved, and top spending categories — all in a beautiful swipeable format you can share.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How does meal planning work?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Set your dietary preferences (vegan, keto, gluten-free, etc.) and favorite cuisines. CoCart's AI generates a full 7-day meal plan tailored to your household. You can swap individual dishes, mark meals as cooked, and add all ingredients to your shopping list with one tap. It even gives you a daily "Tonight's Pick" dinner suggestion with a recipe.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I import digital receipts?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes! Many stores like Walmart and Target offer paperless receipts. You can share a digital receipt directly to CoCart from your email or any app using your phone's share button. You can also paste a receipt screenshot from your clipboard. CoCart reads the receipt and logs the expense to the right group automatically.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How do recall alerts work?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Every time you scan or import a receipt, CoCart automatically checks each item against active FDA and USDA product recall databases. If any item on your receipt has been recalled — for contamination, allergens, or other safety issues — you'll see a warning banner and a red badge on the affected item. The recall data syncs every 12 hours so it's always up to date.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Does CoCart work offline?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes! Your lists, messages, and settings are saved on your phone so you can view and check off items even without internet. When you're back online, everything syncs up automatically.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my data secure?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes. All data is sent over encrypted connections. You can lock the app with Face ID or fingerprint. Groups use admin-controlled invite codes with optional approval for new members. We never share or sell your data.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section class="download-cta" id="download">
+    <div class="container">
+      <div class="cta-card">
+        <h2 class="cta-title">Ready to simplify group shopping?</h2>
+        <p class="cta-subtitle">Download CoCart for free and start shopping smarter with your group today — groceries, supplies, events, and more.</p>
+        <div class="cta-buttons">
+          <span class="btn btn-white" style="opacity: 0.7; cursor: default;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS — Coming Soon
+          </span>
+          <span class="btn btn-outline-white" style="opacity: 0.7; cursor: default;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+            Android — Coming Soon
+          </span>
+        </div>
+        <p class="cta-note">Coming soon to iOS and Android. Free, no credit card required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+              </svg>
+            </div>
+            <span>CoCart <small style="font-weight:400;opacity:.5;">by SharedCircle</small></span>
+          </a>
+          <p class="footer-tagline">Shared shopping, simplified.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#use-cases">Use Cases</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="support.html">Help Center</a>
+          <a href="mailto:support@sharedcircle.app">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SharedCircle. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=390, initial-scale=1.0" />
+<title>Price Drop Nudge Badge Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #eef0f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .phone {
+    width: 340px;
+    flex-shrink: 0;
+  }
+  .label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  }
+
+  /* ── List header ── */
+  .list-header {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .list-title { font-size: 16px; font-weight: 700; color: #111; }
+  .list-count {
+    font-size: 11px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 99px;
+  }
+
+  /* ── Item row ── */
+  .item-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+    border-bottom: 1px solid #f9fafb;
+    position: relative;
+  }
+  .item-row:last-child { border-bottom: none; }
+
+  .item-check {
+    width: 22px; height: 22px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .item-check.done {
+    background: #22c55e;
+    border-color: #22c55e;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 13px;
+  }
+
+  .item-body { flex: 1; min-width: 0; }
+  .item-name { font-size: 14px; font-weight: 600; color: #111; }
+  .item-name.done { text-decoration: line-through; color: #9ca3af; }
+  .item-qty { font-size: 12px; color: #9ca3af; margin-top: 1px; }
+
+  /* price badge on right */
+  .item-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  .price-badge {
+    background: #f5f3ff;
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 99px;
+  }
+  .store-label {
+    font-size: 10px;
+    color: #9ca3af;
+  }
+
+  /* ── DROP NUDGE BADGE ── */
+  .drop-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 99px;
+    margin-top: 4px;
+    white-space: nowrap;
+  }
+  .drop-badge .arrow { font-size: 11px; }
+
+  /* ── VARIANT B: inline under item name ── */
+  .drop-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #15803d;
+    margin-top: 3px;
+  }
+  .drop-inline .dot {
+    width: 5px; height: 5px;
+    background: #22c55e;
+    border-radius: 50%;
+  }
+
+  /* ── VARIANT C: left accent bar ── */
+  .item-row.accent-left {
+    border-left: 3px solid #22c55e;
+    padding-left: 13px;
+  }
+
+  /* section divider */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    padding: 10px 16px 4px;
+    background: #fafafa;
+  }
+  .section-label.green { color: #16a34a; background: #f0fdf4; }
+
+  /* summary strip */
+  .summary-strip {
+    background: #f0fdf4;
+    border-top: 1px solid #bbf7d0;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .summary-icon { font-size: 14px; }
+  .summary-text { font-size: 12px; color: #15803d; font-weight: 600; flex: 1; }
+  .summary-action {
+    font-size: 11px;
+    color: #16a34a;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     VARIANT A — badge on right side (meta column)
+══════════════════════════════ -->
+<div class="phone">
+  <div class="label">Option A — badge in price column</div>
+  <div class="card">
+    <div class="list-header">
+      <span class="list-title">🛒 Shopping List</span>
+      <span class="list-count">4 items</span>
+    </div>
+
+    <!-- item with drop badge -->
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Grapes</div>
+        <div class="item-qty">1 bunch</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$1.67/lb</span>
+        <span class="store-label">@ H-E-B</span>
+        <span class="drop-badge"><span class="arrow">📉</span> Price dropped</span>
+      </div>
+    </div>
+
+    <!-- item without drop -->
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Milk</div>
+        <div class="item-qty">1 gallon</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$3.49/ea</span>
+        <span class="store-label">@ Trader Joe's</span>
+      </div>
+    </div>
+
+    <!-- another drop -->
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Eggs</div>
+        <div class="item-qty">1 dozen</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$4.29/ea</span>
+        <span class="store-label">@ H-E-B</span>
+        <span class="drop-badge"><span class="arrow">📉</span> Price dropped</span>
+      </div>
+    </div>
+
+    <!-- no price data -->
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Bread</div>
+        <div class="item-qty">1 loaf</div>
+      </div>
+      <div class="item-meta">
+        <span class="store-label" style="margin-top:4px;">No price data</span>
+      </div>
+    </div>
+
+    <!-- summary strip at the bottom -->
+    <div class="summary-strip">
+      <span class="summary-icon">📉</span>
+      <span class="summary-text">2 items dropped in price</span>
+      <span class="summary-action">See history</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     VARIANT B — inline under item name
+══════════════════════════════ -->
+<div class="phone">
+  <div class="label">Option B — inline tag below name</div>
+  <div class="card">
+    <div class="list-header">
+      <span class="list-title">🛒 Shopping List</span>
+      <span class="list-count">4 items</span>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Grapes</div>
+        <div class="drop-inline"><span class="dot"></span>Price dropped at H-E-B · was $3.48 → $1.67/lb</div>
+        <div class="item-qty" style="margin-top:2px;">1 bunch</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$1.67/lb</span>
+        <span class="store-label">@ H-E-B</span>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Milk</div>
+        <div class="item-qty">1 gallon</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$3.49/ea</span>
+        <span class="store-label">@ Trader Joe's</span>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Eggs</div>
+        <div class="drop-inline"><span class="dot"></span>Price dropped at H-E-B · was $5.99 → $4.29/ea</div>
+        <div class="item-qty" style="margin-top:2px;">1 dozen</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$4.29/ea</span>
+        <span class="store-label">@ H-E-B</span>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Bread</div>
+        <div class="item-qty">1 loaf</div>
+      </div>
+      <div class="item-meta">
+        <span class="store-label" style="margin-top:4px;">No price data</span>
+      </div>
+    </div>
+
+    <div class="summary-strip">
+      <span class="summary-icon">📉</span>
+      <span class="summary-text">2 items dropped in price</span>
+      <span class="summary-action">See history</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     VARIANT C — grouped section + accent bar
+══════════════════════════════ -->
+<div class="phone">
+  <div class="label">Option C — grouped "Good time to buy"</div>
+  <div class="card">
+    <div class="list-header">
+      <span class="list-title">🛒 Shopping List</span>
+      <span class="list-count">4 items</span>
+    </div>
+
+    <div class="section-label green">📉 Good time to buy</div>
+
+    <div class="item-row accent-left">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Grapes</div>
+        <div class="drop-inline" style="margin-top:2px;"><span class="dot"></span>was $3.48 → $1.67/lb at H-E-B</div>
+        <div class="item-qty" style="margin-top:2px;">1 bunch</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$1.67/lb</span>
+        <span class="store-label">@ H-E-B</span>
+      </div>
+    </div>
+
+    <div class="item-row accent-left">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Eggs</div>
+        <div class="drop-inline" style="margin-top:2px;"><span class="dot"></span>was $5.99 → $4.29/ea at H-E-B</div>
+        <div class="item-qty" style="margin-top:2px;">1 dozen</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$4.29/ea</span>
+        <span class="store-label">@ H-E-B</span>
+      </div>
+    </div>
+
+    <div class="section-label">Other items</div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Milk</div>
+        <div class="item-qty">1 gallon</div>
+      </div>
+      <div class="item-meta">
+        <span class="price-badge">$3.49/ea</span>
+        <span class="store-label">@ Trader Joe's</span>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-name">Bread</div>
+        <div class="item-qty">1 loaf</div>
+      </div>
+      <div class="item-meta">
+        <span class="store-label" style="margin-top:4px;">No price data</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=390, initial-scale=1.0" />
+<title>Price Drop Expand Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #eef0f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .phone { width: 340px; flex-shrink: 0; }
+  .label {
+    text-align: center;
+    font-size: 12px; font-weight: 700; color: #6b7280;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .card {
+    background: #fff; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  }
+
+  /* ── List header ── */
+  .list-header {
+    padding: 14px 16px 10px; border-bottom: 1px solid #f3f4f6;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .list-title { font-size: 16px; font-weight: 700; color: #111; }
+  .list-count { font-size: 11px; color: #6b7280; background: #f3f4f6; padding: 2px 8px; border-radius: 99px; }
+
+  /* ── Banner collapsed ── */
+  .drop-banner {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    background: linear-gradient(120deg, #f0fdf4, #dcfce7);
+    border-bottom: 1px solid #bbf7d0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .drop-banner-icon {
+    width: 30px; height: 30px; background: #22c55e; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+  .drop-banner-body { flex: 1; }
+  .drop-banner-title { font-size: 13px; font-weight: 700; color: #15803d; }
+  .drop-banner-sub   { font-size: 11px; color: #16a34a; margin-top: 1px; }
+  .drop-banner-chevron {
+    font-size: 13px; color: #16a34a; font-weight: 700;
+    transition: transform 0.2s;
+  }
+  .drop-banner-chevron.open { transform: rotate(90deg); }
+
+  /* ── Expanded detail cards ── */
+  .drop-detail {
+    background: #f0fdf4;
+    border-bottom: 1px solid #bbf7d0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease;
+  }
+  .drop-detail.open { max-height: 300px; }
+
+  .drop-item-card {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #dcfce7;
+  }
+  .drop-item-card:last-child { border-bottom: none; }
+
+  .drop-item-emoji {
+    font-size: 22px; width: 34px; text-align: center; flex-shrink: 0;
+  }
+  .drop-item-info { flex: 1; }
+  .drop-item-name { font-size: 13px; font-weight: 700; color: #14532d; }
+  .drop-item-store { font-size: 11px; color: #16a34a; margin-top: 1px; }
+  .drop-item-prices {
+    display: flex; align-items: center; gap: 6px; margin-top: 5px;
+  }
+  .drop-was {
+    font-size: 12px; color: #9ca3af;
+    text-decoration: line-through;
+  }
+  .drop-arrow { font-size: 12px; color: #22c55e; font-weight: 700; }
+  .drop-now  { font-size: 13px; font-weight: 700; color: #15803d; }
+  .drop-pct  {
+    font-size: 10px; font-weight: 700; color: #15803d;
+    background: #dcfce7; border: 1px solid #bbf7d0;
+    padding: 1px 6px; border-radius: 99px;
+  }
+
+  .drop-detail-footer {
+    padding: 8px 16px 10px;
+    font-size: 11px; color: #16a34a; text-align: center;
+    font-style: italic;
+  }
+
+  /* ── Item rows ── */
+  .item-row {
+    display: flex; align-items: center;
+    padding: 11px 16px; gap: 12px;
+    border-bottom: 1px solid #f9fafb;
+  }
+  .item-row:last-child { border-bottom: none; }
+  .item-check {
+    width: 22px; height: 22px; border: 2px solid #d1d5db;
+    border-radius: 6px; flex-shrink: 0;
+  }
+  .item-body { flex: 1; min-width: 0; }
+  .item-name { font-size: 14px; font-weight: 600; color: #111; }
+  .item-qty  { font-size: 11px; color: #9ca3af; margin-top: 1px; }
+  .item-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+
+  .price-badge {
+    font-size: 12px; font-weight: 600;
+    padding: 2px 8px; border-radius: 99px;
+    background: #f5f3ff; color: #4f46e5;
+  }
+  .price-badge.dropped {
+    background: #f0fdf4; color: #15803d;
+    border: 1px solid #bbf7d0;
+  }
+  .price-badge.dropped .arr { font-size: 10px; margin-right: 1px; }
+  .store-label { font-size: 10px; color: #9ca3af; }
+  .store-label.green { color: #16a34a; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ══ COLLAPSED ══ -->
+<div class="phone">
+  <div class="label">Banner collapsed (default)</div>
+  <div class="card">
+    <div class="list-header">
+      <span class="list-title">🛒 Shopping List</span>
+      <span class="list-count">4 items</span>
+    </div>
+
+    <div class="drop-banner" onclick="toggle()">
+      <div class="drop-banner-icon">📉</div>
+      <div class="drop-banner-body">
+        <div class="drop-banner-title">2 items cheaper than last time</div>
+        <div class="drop-banner-sub">Grapes · Eggs — tap to see details</div>
+      </div>
+      <div class="drop-banner-chevron" id="chev">›</div>
+    </div>
+
+    <div class="drop-detail" id="detail">
+      <div class="drop-item-card">
+        <div class="drop-item-emoji">🍇</div>
+        <div class="drop-item-info">
+          <div class="drop-item-name">Grapes</div>
+          <div class="drop-item-store">@ H-E-B</div>
+          <div class="drop-item-prices">
+            <span class="drop-was">$3.48/lb</span>
+            <span class="drop-arrow">→</span>
+            <span class="drop-now">$1.67/lb</span>
+            <span class="drop-pct">−52%</span>
+          </div>
+        </div>
+      </div>
+      <div class="drop-item-card">
+        <div class="drop-item-emoji">🥚</div>
+        <div class="drop-item-info">
+          <div class="drop-item-name">Eggs</div>
+          <div class="drop-item-store">@ H-E-B</div>
+          <div class="drop-item-prices">
+            <span class="drop-was">$5.99/ea</span>
+            <span class="drop-arrow">→</span>
+            <span class="drop-now">$4.29/ea</span>
+            <span class="drop-pct">−28%</span>
+          </div>
+        </div>
+      </div>
+      <div class="drop-detail-footer">Tap a price badge on any row to see full history</div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Grapes</div><div class="item-qty">1 bunch</div></div>
+      <div class="item-meta">
+        <span class="price-badge dropped"><span class="arr">↓</span>$1.67/lb</span>
+        <span class="store-label green">@ H-E-B</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Milk</div><div class="item-qty">1 gallon</div></div>
+      <div class="item-meta">
+        <span class="price-badge">$3.49/ea</span>
+        <span class="store-label">@ Trader Joe's</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Eggs</div><div class="item-qty">1 dozen</div></div>
+      <div class="item-meta">
+        <span class="price-badge dropped"><span class="arr">↓</span>$4.29/ea</span>
+        <span class="store-label green">@ H-E-B</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Bread</div><div class="item-qty">1 loaf</div></div>
+      <div class="item-meta"><span class="store-label" style="margin-top:4px;">No price data</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ EXPANDED (static preview) ══ -->
+<div class="phone">
+  <div class="label">Banner expanded (after tap)</div>
+  <div class="card">
+    <div class="list-header">
+      <span class="list-title">🛒 Shopping List</span>
+      <span class="list-count">4 items</span>
+    </div>
+
+    <div class="drop-banner">
+      <div class="drop-banner-icon">📉</div>
+      <div class="drop-banner-body">
+        <div class="drop-banner-title">2 items cheaper than last time</div>
+        <div class="drop-banner-sub">Tap again to collapse</div>
+      </div>
+      <div class="drop-banner-chevron open">›</div>
+    </div>
+
+    <!-- Detail cards visible -->
+    <div style="background:#f0fdf4; border-bottom: 1px solid #bbf7d0;">
+      <div class="drop-item-card">
+        <div class="drop-item-emoji">🍇</div>
+        <div class="drop-item-info">
+          <div class="drop-item-name">Grapes</div>
+          <div class="drop-item-store">@ H-E-B</div>
+          <div class="drop-item-prices">
+            <span class="drop-was">$3.48/lb</span>
+            <span class="drop-arrow">→</span>
+            <span class="drop-now">$1.67/lb</span>
+            <span class="drop-pct">−52%</span>
+          </div>
+        </div>
+      </div>
+      <div class="drop-item-card">
+        <div class="drop-item-emoji">🥚</div>
+        <div class="drop-item-info">
+          <div class="drop-item-name">Eggs</div>
+          <div class="drop-item-store">@ H-E-B</div>
+          <div class="drop-item-prices">
+            <span class="drop-was">$5.99/ea</span>
+            <span class="drop-arrow">→</span>
+            <span class="drop-now">$4.29/ea</span>
+            <span class="drop-pct">−28%</span>
+          </div>
+        </div>
+      </div>
+      <div class="drop-detail-footer">Tap a price badge on any row to see full history</div>
+    </div>
+
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Grapes</div><div class="item-qty">1 bunch</div></div>
+      <div class="item-meta">
+        <span class="price-badge dropped"><span class="arr">↓</span>$1.67/lb</span>
+        <span class="store-label green">@ H-E-B</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Milk</div><div class="item-qty">1 gallon</div></div>
+      <div class="item-meta">
+        <span class="price-badge">$3.49/ea</span>
+        <span class="store-label">@ Trader Joe's</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Eggs</div><div class="item-qty">1 dozen</div></div>
+      <div class="item-meta">
+        <span class="price-badge dropped"><span class="arr">↓</span>$4.29/ea</span>
+        <span class="store-label green">@ H-E-B</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-check"></div>
+      <div class="item-body"><div class="item-name">Bread</div><div class="item-qty">1 loaf</div></div>
+      <div class="item-meta"><span class="store-label" style="margin-top:4px;">No price data</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let open = false;
+  function toggle() {
+    open = !open;
+    document.getElementById('detail').classList.toggle('open', open);
+    document.getElementById('chev').classList.toggle('open', open);
+  }
+</script>
+</body>
+</html>

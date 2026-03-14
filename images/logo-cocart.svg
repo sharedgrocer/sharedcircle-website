@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="76" y1="20" x2="280" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon: Rounded square with cart -->
+  <rect x="4" y="8" width="56" height="56" rx="16" fill="url(#iconGrad)"/>
+
+  <!-- Cart icon (white) -->
+  <g transform="translate(14, 18)" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Cart body -->
+    <path d="M1 1h5l3.6 18a2.5 2.5 0 0 0 2.5 2h12.2a2.5 2.5 0 0 0 2.4-1.9L30 8H8"/>
+    <!-- Wheels -->
+    <circle cx="13" cy="27" r="1.8" fill="#fff" stroke="none"/>
+    <circle cx="25" cy="27" r="1.8" fill="#fff" stroke="none"/>
+    <!-- Plus sign inside cart -->
+    <line x1="18" y1="11" x2="18" y2="19"/>
+    <line x1="14" y1="15" x2="22" y2="15"/>
+  </g>
+
+  <!-- Wordmark: CoCart — full gradient -->
+  <text x="76" y="50" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="38" font-weight="800" letter-spacing="-1.5" fill="url(#brandGrad)">CoCart</text>
+</svg>
