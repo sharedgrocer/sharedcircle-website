@@ -12,23 +12,239 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found — CoCart by SharedCircle</title>
-  <meta name="description" content="The page you're looking for doesn't exist.">
+  <title>CoCart by SharedCircle</title>
+  <meta name="description" content="CoCart by SharedCircle — the smart shared shopping and expense splitting app.">
+  <meta name="theme-color" content="#10b981">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Open Graph (for invite link previews in iMessage/WhatsApp/etc.) -->
+  <meta property="og:title" content="Join my CoCart group!">
+  <meta property="og:description" content="You've been invited to a shared shopping group on CoCart. Tap to join!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-image.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+
+  <style>
+    /* Shared layout for both 404 and join pages */
+    .page-center {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #050510 0%, #0f172a 50%, #1e293b 100%);
+      padding: 2rem 1rem;
+    }
+    .page-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Join invite styles */
+    .join-logo {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border-radius: 1.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .join-logo svg { color: white; }
+    .join-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+    }
+    .join-subtitle {
+      font-size: 1rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .join-code {
+      display: inline-block;
+      background: rgba(16,185,129,0.15);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: #10b981;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      margin-bottom: 2rem;
+    }
+    .join-instructions {
+      font-size: 0.875rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .store-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .store-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .store-btn:hover { transform: scale(1.02); }
+    .store-btn:active { transform: scale(0.98); }
+    .store-btn-ios {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .store-btn-android {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #f8fafc;
+    }
+    .store-btn svg { flex-shrink: 0; }
+    .join-footer {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #475569;
+    }
+    .join-footer a {
+      color: #10b981;
+      text-decoration: none;
+    }
+    .join-error {
+      color: #f87171;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    /* 404 styles */
+    .error-code {
+      font-size: 5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .error-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 0.75rem;
+    }
+    .error-desc {
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="error-page">
-    <div class="error-content">
+  <!-- Join invite page (shown for /join/{code} URLs) -->
+  <section id="joinPage" class="page-center" style="display:none;">
+    <div class="page-card">
+      <div class="join-logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+        </svg>
+      </div>
+      <h1 class="join-title">You've been invited!</h1>
+      <p class="join-subtitle">Join a shared shopping group on CoCart Mobile</p>
+      <div id="inviteCode" class="join-code" style="display:none;"></div>
+      <div id="errorMsg" class="join-error" style="display:none;"></div>
+      <p class="join-instructions">
+        Download CoCart and the invite code will be applied automatically.
+        Already have the app? It should open now.
+      </p>
+      <div class="store-buttons">
+        <a href="https://apps.apple.com/app/id6760573935" class="store-btn store-btn-ios">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.cocart.mobile" class="store-btn store-btn-android">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"/></svg>
+          Get it on Google Play
+        </a>
+      </div>
+      <div class="join-footer">
+        <a href="/">Learn more about CoCart</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard 404 page (shown for non-join URLs) -->
+  <section id="errorPage" class="page-center" style="display:none;">
+    <div class="page-card">
       <div class="error-code">404</div>
       <h1 class="error-title">Page not found</h1>
       <p class="error-desc">Looks like this item isn't on the list. The page you're looking for doesn't exist or has been moved.</p>
-      <a href="index.html" class="btn btn-primary">Back to Home</a>
+      <a href="/" class="btn btn-primary">Back to Home</a>
     </div>
   </section>
+
+  <script>
+    (function() {
+      var path = window.location.pathname;
+
+      // Check if this is a /join/{code} URL
+      var joinMatch = path.match(/^\/join\/([A-Za-z0-9]{3,8})\/?$/);
+
+      if (joinMatch) {
+        // --- INVITE LINK FLOW ---
+        var code = joinMatch[1].toUpperCase();
+        document.title = 'Join a CoCart Group';
+        document.getElementById('joinPage').style.display = 'flex';
+
+        // Display the code
+        document.getElementById('inviteCode').textContent = code;
+        document.getElementById('inviteCode').style.display = 'inline-block';
+
+        // Try to open the app via custom scheme
+        var deepLink = 'cocart://join/' + encodeURIComponent(code);
+        window.location.href = deepLink;
+
+        // Track web fallback
+        setTimeout(function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'invite_link_web_fallback', { invite_code: code });
+          }
+        }, 1500);
+
+      } else if (path.match(/^\/join\/?$/)) {
+        // /join with no code
+        document.title = 'Join a CoCart Group';
+        document.getElementById('joinPage').style.display = 'flex';
+        document.getElementById('errorMsg').textContent = 'No invite code provided. Ask your friend to share the link again.';
+        document.getElementById('errorMsg').style.display = 'block';
+
+      } else {
+        // --- STANDARD 404 ---
+        document.title = 'Page Not Found — CoCart by SharedCircle';
+        document.getElementById('errorPage').style.display = 'flex';
+      }
+    })();
+  </script>
 
 </body>
 </html>

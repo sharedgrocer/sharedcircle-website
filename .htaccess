@@ -7,8 +7,17 @@
 # Force HTTPS
 # ----------------------------------------
 RewriteEngine On
+
+# Allow .well-known through without redirect
+RewriteRule ^\.well-known/ - [L]
+
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------
+# Invite deep links — route /join/{CODE} to join.html
+# ----------------------------------------
+RewriteRule ^join/[A-Za-z0-9]+/?$ /join.html [L]
 
 # ----------------------------------------
 # Security Headers
@@ -46,10 +55,19 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Options -Indexes
 
 # ----------------------------------------
-# Block access to hidden files (except .htaccess)
+# Block access to hidden files (except .htaccess and .well-known)
 # ----------------------------------------
-<FilesMatch "^\.(?!htaccess)">
+<FilesMatch "^\.(?!htaccess|well-known)">
   Require all denied
+</FilesMatch>
+
+# ----------------------------------------
+# Serve .well-known files as JSON (Universal Links / App Links)
+# ----------------------------------------
+<FilesMatch "apple-app-site-association|assetlinks\.json">
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/json"
+  </IfModule>
 </FilesMatch>
 
 # ----------------------------------------

@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7M7U33DS6F.com.cocart.mobile",
+        "paths": ["/join/*"]
+      }
+    ]
+  }
+}
